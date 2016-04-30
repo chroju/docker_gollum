@@ -10,7 +10,7 @@ gem install gollum github-markdown redcarpet org-ruby --no-ri --no-doc -- --use-
 git config --global user.email "chor.chroju@gmail.com" && git config --global user.name "chroju" && \
 git clone git@github.com:chroju/gollum_articles /root/gollum && \
 touch /etc/periodic/hourly/gitpush && \
-echo -e "#!/bin/sh\ncd /root/gollum && git push origin master" && \
+echo -e "#!/bin/sh\ncd /root/gollum && git push origin master" >> /etc/periodic/hourly/gitpush && \
 chmod a+x /etc/periodic/hourly/gitpush
 
 ADD files/auth.rb /root/gollum/auth.rb
