@@ -15,6 +15,6 @@ chmod a+x /etc/periodic/hourly/gitpush
 
 ADD files/auth.rb /root/gollum/auth.rb
 
-CMD /usr/local/bundle/bin/gollum /root/gollum --config /root/gollum/auth.rb && crond
+CMD crond && /usr/local/bundle/bin/gollum /root/gollum --config /root/gollum/auth.rb
 
 EXPOSE 4567
